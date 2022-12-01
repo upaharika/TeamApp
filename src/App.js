@@ -1,25 +1,23 @@
-import logo from './logo.svg';
-import './App.css';
+import "./App.css";
+import CardComponent from "./components/Card";
+import Header from "./components/Header";
+import { teamDetails } from "../src/assests/teamDetails";
 
-function App() {
+const CardContainer = () => {
+  return teamDetails.map((member) => {
+    return <CardComponent member={member} key={member.id} />;
+  });
+};
+
+const App = () => {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Header />
+      <div className="card-container">
+        <CardContainer />
+      </div>
     </div>
   );
-}
+};
 
 export default App;
