@@ -1,20 +1,22 @@
-import "./App.css";
+import { useState } from "react";
+import { teamDetails } from "../src/assests/teamDetails";
 import CardComponent from "./components/Card";
 import Header from "./components/Header";
-import { teamDetails } from "../src/assests/teamDetails";
+import "./App.css";
 
-const CardContainer = () => {
-  return teamDetails.map((member) => {
+const CardContainer = ({ searchedTeamDetails }) => {
+  return searchedTeamDetails.map((member) => {
     return <CardComponent member={member} key={member.id} />;
   });
 };
 
 const App = () => {
+  const [searchedTeamDetails, setSearchedTeamDetails] = useState(teamDetails);
   return (
     <div className="App">
-      <Header />
+      <Header setSearchedTeamDetails={setSearchedTeamDetails} />
       <div className="card-container">
-        <CardContainer />
+        <CardContainer searchedTeamDetails={searchedTeamDetails} />
       </div>
     </div>
   );

@@ -17,7 +17,7 @@ export const teamDetails = [
   },
   {
     id: 102,
-    img: "https://scontent.fhyd7-1.fna.fbcdn.net/v/t39.30808-6/310286123_448997370665713_3286667191221936839_n.jpg?stp=cp6_dst-jpg&_nc_cat=102&ccb=1-7&_nc_sid=09cbfe&_nc_ohc=-ujoIOAtmIMAX_7Oz1J&_nc_oc=AQlEmtnuQJ2nrJyV7MaDeeoex9FS9igxrFKE4cs6lZbEIaC8YzJLvP49bfllxSqU9Pw&_nc_ht=scontent.fhyd7-1.fna&oh=00_AfCERc5HmlnlB8uNGfkMLk9osxWJJw_z5OLFaNX5p4ypDQ&oe=63881DE0",
+    img: male,
     name: "Rishav Sah",
     address: "Gachibowli, Hyderabad",
     organization: "myPaisaa",

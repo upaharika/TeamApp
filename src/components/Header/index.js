@@ -1,7 +1,8 @@
 import TeamLogo from "../../assests/logo-web-pirates.png";
+import SearchBar from "../SearchBar";
 import "./style.css";
 
-const Header = () => {
+const Header = ({ setSearchedTeamDetails }) => {
   return (
     <div className="header-container">
       <div className="header-logo">
@@ -10,6 +11,7 @@ const Header = () => {
         </div>
         <span className="team-name">Web Pirates</span>
       </div>
+      <SearchBar setSearchedTeamDetails={setSearchedTeamDetails} />
     </div>
   );
 };
