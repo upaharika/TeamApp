@@ -1,0 +1,30 @@
+.member-img {
+  width: 50%;
+  height: 200px;
+  max-width: 100%;
+  padding: 7px;
+  border-radius: 20%;
+}
+
+.card {
+  width: 350px;
+  max-width: 100%;
+  margin: 20px;
+  border-radius: 20%;
+  overflow: hidden;
+  box-shadow: rgba(160, 202, 244, 0.936) 0px 8px 24px;
+  border: 2px solid #4565;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  text-align: center;
+  padding-top: 20px;
+}
+
+.card-content {
+  padding: 1.25rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
