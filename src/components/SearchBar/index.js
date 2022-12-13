@@ -1,36 +1,41 @@
 import { useState } from "react";
-import { teamDetails } from "../../assests/teamDetails.js";
 import "./style.css";
 
 const onSearchTeamDetails = (searchText, teamDetails) => {
-  return teamDetails.filter(
+  const arr = teamDetails;
+  return arr.filter(
     (member) =>
-      member.name.toLowerCase().includes(searchText) ||
-      member.designation.toLowerCase().includes(searchText)
+      member?.login?.toLowerCase().includes(searchText.toLowerCase()) ||
+      member?.company?.toLowerCase().includes(searchText.toLowerCase())
   );
 };
 
-const SearchBar = ({ setSearchedTeamDetails }) => {
+const SearchBar = ({ setSearchedTeamDetails, teamDetails, setNoResult }) => {
   const [searchText, setSearchText] = useState("");
 
-  const onChange = (e) => {
+  const handleOnChange = (e) => {
     setSearchText(e.target.value);
   };
 
-  const onInputSubmit = (e) => {
+  const handleSubmit = (e) => {
     e.preventDefault();
-    const searchedTeamDetails = onSearchTeamDetails(searchText, teamDetails);
-    setSearchedTeamDetails(searchedTeamDetails);
+    const searchedMember = onSearchTeamDetails(searchText, teamDetails);
+    if (!searchedMember.length) {
+      setNoResult(true);
+    } else {
+      setNoResult(false);
+      setSearchedTeamDetails(searchedMember);
+    }
   };
   return (
     <div className="search-bar">
-      <form onSubmit={onInputSubmit}>
+      <form onSubmit={handleSubmit}>
         <input
           id="restaurant"
-          placeholder="search restaurant"
+          placeholder="search member..."
           value={searchText}
           type="text"
-          onChange={onChange}
+          onChange={handleOnChange}
           autoFocus
         />
       </form>

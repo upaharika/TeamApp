@@ -1,22 +1,58 @@
-import { useState } from "react";
-import { teamDetails } from "../src/assests/teamDetails";
-import CardComponent from "./components/Card";
-import Header from "./components/Header";
-import "./App.css";
+import { useState, useEffect } from "react";
 
-const CardContainer = ({ searchedTeamDetails }) => {
-  return searchedTeamDetails.map((member) => {
-    return <CardComponent member={member} key={member.id} />;
-  });
-};
+import Header from "./components/Header";
+import userData from "./assets/userData.json";
+import "./App.css";
+import NoResultsComponent from "./components/NoResults/NoResultsComponent";
+import { CardContainer } from "./components/CardContainer";
 
 const App = () => {
-  const [searchedTeamDetails, setSearchedTeamDetails] = useState(teamDetails);
+  const [teamDetails, setTeamDetails] = useState([]);
+  const [searchedTeamDetails, setSearchedTeamDetails] = useState([]);
+  const [noResult, setNoResult] = useState(false);
+
+  useEffect(() => {
+    fetchData();
+  }, []);
+
+  function fetchData() {
+    let teamArr = [];
+    userData.map(async (userData) => {
+      let jsonTeamData;
+      if (localStorage.getItem(userData.username)) {
+        jsonTeamData = JSON.parse(localStorage.getItem(userData.username));
+      } else {
+        const teamData = await fetch(
+          `https://api.github.com/users/${userData.username}`
+        );
+        jsonTeamData = await teamData.json();
+        if (jsonTeamData !== null) {
+          localStorage.setItem(userData.username, JSON.stringify(jsonTeamData));
+        }
+      }
+
+      teamArr.push(jsonTeamData);
+      setTeamDetails([...teamDetails, ...teamArr]);
+    });
+  }
+
   return (
     <div className="App">
-      <Header setSearchedTeamDetails={setSearchedTeamDetails} />
+      <Header
+        setSearchedTeamDetails={setSearchedTeamDetails}
+        teamDetails={teamDetails}
+        setNoResult={setNoResult}
+      />
       <div className="card-container">
-        <CardContainer searchedTeamDetails={searchedTeamDetails} />
+        {!noResult ? (
+          <CardContainer
+            teamMembers={
+              searchedTeamDetails.length ? searchedTeamDetails : teamDetails
+            }
+          />
+        ) : (
+          <NoResultsComponent />
+        )}
       </div>
     </div>
   );
