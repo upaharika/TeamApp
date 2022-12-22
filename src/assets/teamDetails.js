@@ -1,10 +1,10 @@
-import male from "../../src/assests/male.jpeg";
-import upaharika from "../../src/assests/upaharika.jpeg";
-import rucha from "../../src/assests/rucha.jpeg";
-import pratik from "../../src/assests/pratik.jpeg";
-import shailendra from "../../src/assests/shailendra.jpeg";
-import shubham from "../../src/assests/shubham.jpeg";
-import abhishek from "../../src/assests/abhishek.png";
+import male from "../../src/assets/male.jpeg";
+import upaharika from "../../src/assets/upaharika.jpeg";
+import rucha from "../../src/assets/rucha.jpeg";
+import pratik from "../../src/assets/pratik.jpeg";
+import shailendra from "../../src/assets/shailendra.jpeg";
+import shubham from "../../src/assets/shubham.jpeg";
+import abhishek from "../../src/assets/abhishek.png";
 
 export const teamDetails = [
   {

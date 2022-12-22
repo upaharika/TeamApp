@@ -1,18 +1,17 @@
 import "./style.css";
 
-const CardComponent = ({ member }) => {
+const CardComponent = ({
+  member: { login, avatar_url, company, followers },
+}) => {
   return (
     <div className="card">
-      <img className="member-img" src={member.img}></img>
+      <img className="member-img" src={avatar_url} alt=""></img>
       <div className="card-content">
-        <h1>
-          <b>{member.name}</b>
-        </h1>
-        <p className="title">
-          <b>{member.designation}</b>
-        </p>
-        <p>{member.organization}</p>
-        <p>{member.location}</p>
+        <h2>
+          <b>{login}</b>
+        </h2>
+        <p>Organisation: {company}</p>
+        <p>Followers: {followers}</p>
       </div>
     </div>
   );
