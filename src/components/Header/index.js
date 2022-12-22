@@ -1,8 +1,9 @@
+import { Link } from "react-router-dom";
 import TeamLogo from "../../assets/logo-web-pirates.png";
 import SearchBar from "../SearchBar";
 import "./style.css";
 
-const Header = ({ setSearchedTeamDetails, teamDetails, setNoResult }) => {
+const Header = () => {
   return (
     <div className="header-container">
       <div className="header-logo">
@@ -11,11 +12,14 @@ const Header = ({ setSearchedTeamDetails, teamDetails, setNoResult }) => {
         </div>
         <span className="team-name">Web Pirates</span>
       </div>
-      <SearchBar
-        setNoResult={setNoResult}
-        setSearchedTeamDetails={setSearchedTeamDetails}
-        teamDetails={teamDetails}
-      />
+      <div className="header-links">
+        <Link className="search" to={`/search-page`}>
+          Search
+        </Link>
+        <Link className="about-us" to={`/about-us`}>
+          AboutUs
+        </Link>
+      </div>
     </div>
   );
 };

@@ -2,6 +2,9 @@
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+  background-color: lavender;
+  padding: 20px;
+  margin: 20px;
 }
 
 .header-logo {
@@ -21,4 +24,19 @@
 
 .team-name {
   font-size: 60px;
+}
+
+.header-links {
+  display: flex;
+  text-align: center;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: row;
+  font-size: 20px;
+  font-weight:600;
+  text-decoration: underline;
+}
+
+.search {
+  padding-right: 10px;
 }
