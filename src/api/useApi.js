@@ -23,11 +23,12 @@ function useApi() {
           localStorage.setItem(userData.username, JSON.stringify(jsonTeamData));
         }
       }
+      jsonTeamData["state"] = userData.state;
+      jsonTeamData["city"] = userData.city;
       teamArr.push(jsonTeamData);
     });
     setTeamDetails([...teamDetails, ...teamArr]);
   };
-
   return { teamDetails };
 }
 

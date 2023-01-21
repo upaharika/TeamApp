@@ -1,5 +1,11 @@
-.App {
-  margin: 40px;
+
+:root, [theme-change="light"] {
+background-image: #fff;
+}
+
+[theme-change="dark"] {
+background-image: linear-gradient(to right, #870000, #190a05);
+color: azure;
 }
 
 a {

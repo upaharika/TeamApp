@@ -7,9 +7,8 @@ import { appRouter } from "./Routes/routes";
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   //In strict mode everything runs twice, to ensure that your components behave properly
-  <React.StrictMode>
-    <RouterProvider router={appRouter}>
-      <App />
-    </RouterProvider>
-  </React.StrictMode>
+
+  <RouterProvider router={appRouter}>
+    <App />
+  </RouterProvider>
 );

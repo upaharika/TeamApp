@@ -26,7 +26,11 @@ class AboutUsContent extends React.Component {
   render() {
     console.log("Child render : AboutUsContent");
     return (
-      <div className="aboutus">
+      <div
+        className="aboutus">
+        <p>
+          <b>Hello Visitor! 👋</b>
+        </p>
         <p>We're 13 {this.props.teamName} from Namaste React Bootcamp.</p>
         <p>
           We're here to make us a better react developer by learning from the

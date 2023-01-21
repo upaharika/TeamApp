@@ -1,9 +1,19 @@
 input[type="text"] {
-  width: 20rem;
+  width: 20vw;
   border-radius: 50px;
-  padding: 10px;
   border: solid 1px slategrey;
   font-size: 20px;
+  height: 40px;
+}
+
+select {
+  width: 10vw;
+  height: 40px;
+  margin: 8px;
+  border-radius: 50px;
+  font-size: 20px;
+  color: slategrey;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 
 .search-bar {

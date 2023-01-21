@@ -1,5 +1,7 @@
 import React from "react";
 import { Outlet } from "react-router-dom";
+
+import ThemeContext from "../../context/ThemeContext";
 import "./style.css";
 
 class AboutUs extends React.Component {
@@ -19,15 +21,18 @@ class AboutUs extends React.Component {
   }
 
   render() {
+    const { theme } = this.context;
     console.log("Parent render : AboutUs");
     return (
-      <div className="aboutus-container">
-        <p>
-          <b>Hello Visitor! 👋</b>
-        </p>
+      <div
+        className="aboutus-container"
+        theme-change={theme === "light" ? "light" : "dark"}
+      >
         <Outlet />
       </div>
     );
   }
 }
+
+AboutUs.contextType = ThemeContext;
 export default AboutUs;
