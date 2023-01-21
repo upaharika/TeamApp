@@ -1,9 +1,23 @@
-.App {
-  margin: 40px;
+
+:root, [theme-change="light"] {
+background-image: #fff;
 }
+
+[theme-change="dark"] {
+background-image: linear-gradient(to right, #870000, #190a05);
+color: azure;
+}
+
+a {
+  text-decoration: none;
+  color: #000;
+}
+
 .card-container {
+  height: 100vh;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   margin-top: 30px;
 }
+

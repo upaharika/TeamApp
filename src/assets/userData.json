@@ -1,34 +1,62 @@
 [
   {
     "id": 101,
-    "username": "upaharika"
+    "username": "upaharika",
+    "state" : "Karnataka",
+    "city" : "Bengaluru"
   },
   {
     "id": 102,
-    "username": "Pratik33"
+    "username": "Pratik33",
+    "state": "Maharashtra",
+		"city": "Pune"
   },
   {
     "id": 103,
-    "username": "ruchamahabal"
+    "username": "ruchamahabal",
+    "state": "Maharashtra",
+		"city": "Mumbai"
   },
   {
     "id": 104,
-    "username": "abhishekps782"
+    "username": "abhishekps782",
+    "state": "Karnataka",
+		"city": "Bengaluru"
   },
   {
     "id": 105,
-    "username": "rishav-sah"
+    "username": "rishav-sah",
+    "state": "Telangana",
+		"city": "Hyderabad"
   },
   {
     "id": 106,
-    "username": "shubhamyadav30"
+    "username": "shubhamyadav30",
+    "state": "Punjab",
+		"city": "Mohali"
   },
   {
     "id": 107,
-    "username": "ShailendraSinghRaikwar"
+    "username": "ShailendraSinghRaikwar",
+    "state": "Madhya Pradesh",
+		"city": "Bhopal"
   },
   {
     "id": 108,
-    "username": "vinaysaip"
+    "username": "vinaysaip",
+    "state": "Andhra Pradesh",
+		"city": "Purettipalli"
+  },
+  {
+    "id": 109,
+    "username": "mojahidhd",
+    "state": "Delhi",
+		"city": "New Delhi"
+  },
+    {
+    "id": 110,
+    "username": "taj0598",
+    "state": "Andhra Pradesh",
+		"city": "Nellore"
   }
 ]

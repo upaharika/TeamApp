@@ -1,0 +1,15 @@
+.member-icon {
+    width: 20rem;
+    height: 20rem;
+}
+
+.member-info {
+    color: #666c73;
+    padding: 10px;
+}
+
+.stats-container {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
